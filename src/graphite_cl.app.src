@@ -1,0 +1,12 @@
+{application, graphite_cl,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { graphite_cl_app, []}},
+  {env, []}
+ ]}.
