@@ -39,6 +39,7 @@ handle_cast(_Msg, State) ->
 handle_info(check, OldTimer) ->
   	erlang:cancel_timer(OldTimer),
   	estatsd:timing("heartbeat", 1),
+  	io:format("SEND METRIC"),
   	Timer = erlang:send_after(1000, self(), check),
   	{noreply, Timer}.
 
